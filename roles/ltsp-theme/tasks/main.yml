@@ -1,0 +1,6 @@
+---
+- name: Copy the lug-theme
+  copy: src=lug-theme dest=/opt/ltsp/i386/usr/share/ldm/themes/lug-theme owner=root group=root mode=0644 directory_mode=0755
+
+- name: Configure clients to use the theme
+  copy: src=lts.conf dest=/var/lib/tftpboot/ltsp/i386/lts.conf owner=root group=root mode=0644
